@@ -51,7 +51,15 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
-    
+    public void listMatching(String searchString)
+    {
+        for(String filename : files) {
+            if(filename.contains(searchString)){
+                // A match.
+                System.out.println(filename);
+            }
+        }
+    }
     /**
      * Show a list of all the files in the collection.
      */
@@ -61,6 +69,7 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
+    
     
     /**
      * Remove a file from the collection.
